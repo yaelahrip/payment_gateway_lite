@@ -1,3 +1,8 @@
+
+import os
+os.environ["BROWSER_EXECUTABLE_PATH"] = "/usr/bin/chromium"
+
+
 from flask import Flask, request, jsonify
 from botasaurus.browser import browser, Driver, Wait
 from botasaurus.window_size import WindowSize
