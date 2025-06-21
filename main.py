@@ -6,6 +6,10 @@ import uuid, time, base64
 app = Flask(__name__)
 MAX_RETRIES = 3
 
+@app.route('/')
+def home():
+    return '✅ Hello from Flask on Railway!'
+
 # === Botasaurus Automation Task
 def lynk_checkout_and_get_qr(url, name, email, bid_price=None):
     result = {}
