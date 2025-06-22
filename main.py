@@ -66,7 +66,7 @@ def lynk_checkout_and_get_qr(url, name, email, bid_price=None):
 
             print("🛒 Clicking 'Buy Now'")
             #driver.get_element_with_exact_text("Buy Now", wait=Wait.SHORT).click()
-            driver.click('#form > div.W\(100\%\) > div > div > div > button', wait=Wait.SHORT)
+            driver.click(r'#form > div.W\(100\%\) > div > div > div > button', wait=Wait.SHORT)
 
             print("📧 Typing email and name")
             retry_type('#payer_email', email)
