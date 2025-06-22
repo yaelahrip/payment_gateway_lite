@@ -11,6 +11,9 @@ import uuid, time, base64
 app = Flask(__name__)
 MAX_RETRIES = 3
 
+from botasaurus import config
+config.browser_executable_path = "/usr/bin/chromium-browser"
+
 @app.route('/')
 def home():
     return '✅ Hello from Flask on Railway!'
