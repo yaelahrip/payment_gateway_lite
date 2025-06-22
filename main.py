@@ -1,7 +1,7 @@
 
 import os
 os.environ["BROWSER_EXECUTABLE_PATH"] = "/usr/bin/chromium"
-
+os.environ["BROWSER_ARGS"] = "--no-sandbox --disable-dev-shm-usage"
 
 from flask import Flask, request, jsonify
 from botasaurus.browser import browser, Driver, Wait
